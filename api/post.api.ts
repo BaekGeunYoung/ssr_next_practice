@@ -1,29 +1,27 @@
-import fetch from 'isomorphic-unfetch';
+import axios from 'axios';
 
 const API_URL = "http://localhost:4000/api";
 
 export interface PostType {
-  id: string;
-  title: string;
-  content: string;
+    id: string
+    title: string
+    content: string
 }
 
-export async function getPosts() {
-  const request = await fetch(`${API_URL}/posts`);
-  const response = await request.json();
-  const { posts } = response;
+export const getPosts = async () => {
+    const response = await axios.get(`${API_URL}/posts`);
+    const { data : { posts } } = response;
 
-  return {
-    posts
-  };
-}
+    return {
+        posts
+    }
+};
 
-export async function getPost(postId: string) {
-  const request = await fetch(`${API_URL}/posts/${postId}`);
-  const response = await request.json();
-  const { post } = response;
+export const getPost = async (postId: string) => {
+    const response = await axios.get(`${API_URL}/posts/${postId}`)
+    const { data: { post }} = response;
 
-  return {
-    post
-  };
+    return {
+        post
+    }
 }

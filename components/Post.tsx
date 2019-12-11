@@ -4,18 +4,18 @@ import styled from 'styled-components';
 import { PostType } from '../api';
 
 interface Props {
-  post: PostType;
+    post: PostType;
 }
 
 export const Post: React.FC<Props> = ({ post }) => {
-  return (
-    <Container>
-      <Header>
-        <Title>{post.title}</Title>
-        <Content>{post.content}</Content>
-      </Header>
-    </Container>
-  );
+    return (
+        <Container>
+            <Header>
+                <Title>{post.title}</Title>
+                <Content>{post.content}</Content>
+            </Header>
+        </Container>
+    );
 };
 
 const Container = styled.div`

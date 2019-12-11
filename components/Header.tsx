@@ -1,15 +1,15 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Header: React.FC = () => {
-  return (
-    <Container>
-      <Link href="/">
-        <Logo>Post-app</Logo>
-      </Link>
-    </Container>
-  );
+    return (
+        <Container>
+            <Link href="/">
+                <Logo>Post-app</Logo>
+            </Link>
+        </Container>
+    );
 };
 
 const Container = styled.div`

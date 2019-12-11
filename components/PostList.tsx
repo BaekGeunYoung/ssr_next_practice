@@ -5,21 +5,21 @@ import { PostType } from '../api';
 import { PostItem } from './PostItem';
 
 interface Props {
-  posts: PostType[];
+    posts: PostType[];
 }
 
 export const PostList: React.FC<Props> = ({ posts }) => {
-  return (
-    <div>
-      {posts.map(post => {
-        return (
-          <PostWrapper key={post.id}>
-            <PostItem post={post} />
-          </PostWrapper>
-        );
-      })}
-    </div>
-  );
+    return (
+        <div>
+            {posts.map(post => {
+                return (
+                    <PostWrapper key={post.id}>
+                        <PostItem post={post} />
+                    </PostWrapper>
+                );
+            })}
+        </div>
+    );
 };
 
 const PostWrapper = styled.div`

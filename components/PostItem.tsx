@@ -5,15 +5,15 @@ import styled from 'styled-components';
 import { PostType } from '../api';
 
 interface Props {
-  post: PostType;
+    post: PostType;
 }
 
 export const PostItem: React.FC<Props> = ({ post }) => {
-  return (
-    <Link href={`/posts/[id]`} as={`/posts/${post.id}`}>
-      <Container>{post.title}</Container>
-    </Link>
-  );
+    return (
+        <Link href={`/posts/[id]`} as={`/posts/${post.id}`}>
+            <Container>{post.title}</Container>
+        </Link>
+    );
 };
 
 const Container = styled.div`

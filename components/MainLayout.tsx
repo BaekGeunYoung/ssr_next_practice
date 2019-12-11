@@ -5,23 +5,23 @@ import styled from 'styled-components';
 import { Header } from './Header';
 
 interface Props {
-  title: string;
+    title: string;
 }
 
 export const MainLayout: React.FC<Props> = ({ title, children }) => {
-  return (
-    <Container>
-      <Head>
-        <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-      <Main>{children}</Main>
-    </Container>
-  );
+    return (
+        <Container>
+            <Head>
+                <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
+            <HeaderWrapper>
+                <Header />
+            </HeaderWrapper>
+            <Main>{children}</Main>
+        </Container>
+    );
 };
 
 const Container = styled.div`
